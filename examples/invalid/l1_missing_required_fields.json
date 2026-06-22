@@ -1,0 +1,18 @@
+{
+  "cor_version": "1.0.1",
+  "level": 1,
+  "id": "example-l1-invalid-missing-fields",
+  "created_utc": "2026-01-15T12:00:00Z",
+  "language": "en",
+  "generator": {
+    "actor_type": "hybrid",
+    "name": "COR Proof Reference Tool",
+    "version": "0.1.0"
+  },
+  "claim": {
+    "id": "c1",
+    "text": "This artifact is intentionally invalid for testing purposes.",
+    "type": "factual"
+  },
+  "_NOTICE": "This file is intentionally invalid. It is missing the required 'evidence', 'reasoning_atoms', 'validation', and 'metadata' fields. Expected validation result: INVALID."
+}

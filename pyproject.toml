@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cor-proof"
+version = "0.1.0"
+description = "COR Proof (Chain-of-Reasoning Proof) — Python reference validator for L1 structural artifacts"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE.md", "NOTICE.md"]
+authors = [
+    { name = "OmnySync Group LLC", email = "founder@omnysyncai.com" }
+]
+keywords = [
+    "AI reasoning",
+    "structured reasoning",
+    "reasoning artifact",
+    "AI auditability",
+    "chain of reasoning",
+    "COR Proof",
+    "schema validation",
+    "reasoning integrity",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "jsonschema>=4.18,<5",
+    "click>=8.1,<9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "build",
+    "twine",
+]
+
+[project.scripts]
+cor-proof = "cor_proof.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/OmnySync-Group/cor-proof"
+Repository = "https://github.com/OmnySync-Group/cor-proof-py"
+Issues = "https://github.com/OmnySync-Group/cor-proof-py/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"cor_proof.schema" = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"

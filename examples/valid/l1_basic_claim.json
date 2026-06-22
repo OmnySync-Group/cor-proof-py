@@ -1,0 +1,70 @@
+{
+  "cor_version": "1.0.1",
+  "level": 1,
+  "id": "example-l1-software-release-basic",
+  "created_utc": "2026-01-15T12:00:00Z",
+  "language": "en",
+  "generator": {
+    "actor_type": "hybrid",
+    "name": "COR Proof Reference Tool",
+    "version": "0.1.0",
+    "instance_id": "local-validation-demo"
+  },
+  "claim": {
+    "id": "c1",
+    "text": "Version 3.2.0 of the software introduced a breaking change to the configuration file format.",
+    "type": "factual",
+    "scope": "software release notes",
+    "domain": ["software", "changelog"]
+  },
+  "evidence": [
+    {
+      "id": "e1",
+      "type": "document",
+      "description": "The official CHANGELOG.md entry for version 3.2.0 explicitly states that the configuration format changed and is not backward-compatible.",
+      "source_ref": "CHANGELOG.md#v3.2.0",
+      "citation": "v3.2.0 (2026-01-10): Breaking change — configuration schema updated. See migration guide."
+    }
+  ],
+  "reasoning_atoms": [
+    {
+      "id": "ra-001",
+      "step_index": 1,
+      "statement": "The CHANGELOG entry for v3.2.0 explicitly labels the configuration change as breaking.",
+      "inference_type": "deduction",
+      "inputs": ["e1"],
+      "outputs": ["c1"],
+      "supports_claims": ["c1"],
+      "uncertainty": {
+        "score": 0.05,
+        "band": "low"
+      },
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "The CHANGELOG accurately reflects the actual behavior of the release.",
+          "uncertainty": { "score": 0.1, "band": "low" }
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "overall_status": "validated",
+    "validators": [
+      {
+        "id": "cor-proof-py-v0.1.0",
+        "actor_type": "model",
+        "name": "cor-proof Python validator",
+        "version": "0.1.0",
+        "timestamp_utc": "2026-01-15T12:01:00Z",
+        "scope": "L1 structural schema",
+        "verdict": "pass",
+        "comments": "Validated against COR Proof L1 schema v1.0.1 (draft 2020-12)."
+      }
+    ]
+  },
+  "metadata": {
+    "tags": ["example", "l1", "valid", "software", "neutral"],
+    "notes": "Minimal valid COR Proof L1 artifact. Neutral domain. Used for package testing and demonstration."
+  }
+}
