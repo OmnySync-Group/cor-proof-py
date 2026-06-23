@@ -1,9 +1,15 @@
 # COR Proof — Python Validator
 
+[![PyPI](https://img.shields.io/pypi/v/cor-proof.svg)](https://pypi.org/project/cor-proof/)
+[![Python](https://img.shields.io/pypi/pyversions/cor-proof.svg)](https://pypi.org/project/cor-proof/)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE.md)
+
 **COR Proof (Chain-of-Reasoning Proof)** is an open standard for capturing, validating,
 and auditing reasoning structure in AI and human–AI systems.
 
 This package provides the Python reference implementation for **Level 1 (L1) structural validation**.
+
+**COR Proof L1 is a schema-enforced audit gate for AI reasoning artifacts. It validates structure, not truth.**
 
 ---
 
